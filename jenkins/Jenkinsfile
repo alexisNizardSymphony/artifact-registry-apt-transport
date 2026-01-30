@@ -45,9 +45,7 @@ node(POD_LABEL) {
   }
 
   stage("Snyk scan"){
-    snykScan('cicd-i4n') {
-      additionalTestArgs = '--all-projects --skip-unresolved'
-    }
+    snykScan('cicd-i4n') {}
   }
 
   stage("publish") {
